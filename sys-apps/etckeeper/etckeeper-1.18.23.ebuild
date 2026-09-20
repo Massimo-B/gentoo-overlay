@@ -3,21 +3,21 @@
 
 EAPI=8
 
-inherit bash-completion-r1 prefix systemd tmpfiles
+inherit bash-completion-r1 git-r3 prefix systemd tmpfiles
 
 DESCRIPTION="A collection of tools to let /etc be stored in a repository"
 HOMEPAGE="https://etckeeper.branchable.com/"
-SRC_URI="https://git.joeyh.name/index.cgi/etckeeper.git/snapshot/${P}.tar.gz"
+
+EGIT_REPO_URI="https://github.com/Massimo-B/etckeeper.git"
+EGIT_COMMIT="${PV}"
 
 LICENSE="GPL-2+"
 SLOT="0"
 KEYWORDS="~amd64 ~arm ~arm64 ~hppa ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="cron test"
 
-BDEPEND="test? (
-	dev-util/bats
-	dev-vcs/git
-)"
+BDEPEND="dev-vcs/git
+	test? ( dev-util/bats )"
 
 RDEPEND="app-portage/portage-utils
 	cron? ( virtual/cron )
