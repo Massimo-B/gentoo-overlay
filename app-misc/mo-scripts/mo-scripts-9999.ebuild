@@ -5,7 +5,7 @@ EAPI=8
 
 inherit git-r3
 
-DESCRIPTION="Personal scripts for backups, pictures, PDFs, screenshots and brightness"
+DESCRIPTION="Personal scripts for backups, OpenWrt configs, pictures, PDFs and displays"
 HOMEPAGE="https://github.com/Massimo-B/scripts"
 EGIT_REPO_URI="https://github.com/Massimo-B/scripts.git"
 
@@ -14,14 +14,19 @@ SLOT="0"
 KEYWORDS=""
 
 RDEPEND="
+	app-arch/gzip
+	app-arch/tar
 	app-backup/dar
 	app-misc/ddcutil
 	app-shells/bash
 	app-text/ghostscript-gpl
 	app-text/pdftk
 	app-text/qpdf
+	dev-vcs/git
 	media-gfx/flameshot
 	media-gfx/imagemagick[jpeg]
+	net-misc/openssh
+	net-misc/rsync
 	sys-apps/coreutils
 	sys-apps/file
 	sys-apps/gawk
