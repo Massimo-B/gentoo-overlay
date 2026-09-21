@@ -1,0 +1,31 @@
+--- a/compress_pictures
++++ b/compress_pictures
+@@ -77,13 +77,7 @@
+ libs=( output )
+ for lib in "${libs[@]}"; do
+     lib_path="${BASH_PREFIX:-/}usr/local/lib/lib_$lib"
+-    if [[ -r lib_$lib ]]; then
+-        source "lib_$lib"
+-        continue
+-    elif [[ -r ${this_dirname}/lib_$lib ]]; then
+-        source "${this_dirname}/lib_$lib"
+-        continue
+-    elif [[ -r "$lib_path" ]]; then
++    if [[ -r "$lib_path" ]]; then
+         source "$lib_path"
+         continue
+     else
+--- a/shrinkpdf
++++ b/shrinkpdf
+@@ -8,10 +8,7 @@
+ libs=( output )
+ for lib in "${libs[@]}"; do
+     lib_path="${BASH_PREFIX:-/}usr/local/lib/lib_$lib"
+-    if [[ lib_$lib ]]; then
+-        source "lib_$lib"
+-        continue
+-    elif [[ -e "$lib_path" ]]; then
++    if [[ -r "$lib_path" ]]; then
+         source "$lib_path"
+         continue
+     else
