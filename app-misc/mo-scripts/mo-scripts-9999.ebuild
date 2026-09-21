@@ -9,8 +9,7 @@ DESCRIPTION="Personal scripts for backups, pictures, PDFs, screenshots and brigh
 HOMEPAGE="https://github.com/Massimo-B/scripts"
 EGIT_REPO_URI="https://github.com/Massimo-B/scripts.git"
 
-# Upstream does not currently declare a license.
-LICENSE="all-rights-reserved"
+LICENSE="GPL-2"
 SLOT="0"
 KEYWORDS=""
 
